@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vicen\\OneDrive\\Área de Trabalho\\pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap\\src\\interview\\interview\\interview.csproj": {}
+    "C:\\Users\\vicen\\Área de Trabalho\\pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap\\src\\interview\\interview\\interview.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vicen\\OneDrive\\Área de Trabalho\\pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap\\src\\interview\\interview\\interview.csproj": {
+    "C:\\Users\\vicen\\Área de Trabalho\\pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap\\src\\interview\\interview\\interview.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vicen\\OneDrive\\Área de Trabalho\\pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap\\src\\interview\\interview\\interview.csproj",
+        "projectUniqueName": "C:\\Users\\vicen\\Área de Trabalho\\pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap\\src\\interview\\interview\\interview.csproj",
         "projectName": "interview",
-        "projectPath": "C:\\Users\\vicen\\OneDrive\\Área de Trabalho\\pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap\\src\\interview\\interview\\interview.csproj",
+        "projectPath": "C:\\Users\\vicen\\Área de Trabalho\\pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap\\src\\interview\\interview\\interview.csproj",
         "packagesPath": "C:\\Users\\vicen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vicen\\OneDrive\\Área de Trabalho\\pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap\\src\\interview\\interview\\obj\\",
+        "outputPath": "C:\\Users\\vicen\\Área de Trabalho\\pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap\\src\\interview\\interview\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
