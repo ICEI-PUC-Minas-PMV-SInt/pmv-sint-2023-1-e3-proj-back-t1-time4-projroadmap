@@ -1,46 +1,36 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+E se os candidatos às vagas de emprego de desenvolvimento Front-End tivessem uma ferramenta para ajudá-los a se preparar para os testes técnicos dos processos seletivos?
+
+Os setores de tecnologia são os que mais empregam no Brasil. Segundo a revista Exame (Dez., 2021) e a Associação das Empresas de Tecnologia da Informação e Comunicação (Brasscom), o setor de tecnologia contratou 147.248 novos profissionais no Brasil, um aumento de 149% em relação ao ano de 2020. O que significa que aproximadamente 59.000 novos profissionais foram empregados nesse período. 
+
+Boa parte destas contratações foram destinadas a desenvolvedores Front-end. Este profissional é responsável pela criação da parte visual e interativa das aplicações, sejam elas web, nativas ou híbridas. O desenvolvedor Front-End usa de linguagens de programação, softwares e outras tecnologias, além dos mais diversos conhecimentos das áreas de comunicação e design, por exemplo, para alcançar os resultados almejados em usabilidade e engajamento dos usuários. 
+
+Durante os processos seletivos é comum que os candidatos sejam submetidos a vários tipos de testes de conhecimentos na área pretendida, e para ser aprovado é necessário muito estudo e preparação.
+
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+O problema a ser solucionado é auxiliar o profissional desenvolvedor Front-End a se atualizar, treinar e se sentir mais confiante durante uma entrevista ou avaliação de uma vaga de emprego na área Front-End. Aqui pretendemos motivar a observação e aprendizado dos conteúdos principais que cercam e abordam as ações principais dentro deste setor de tecnologia. 
 
 ## Objetivos
+O objetivo geral deste trabalho é a criação de um  site responsivo e de fácil uso, que apresente ao usuário perguntas que poderiam ser usadas  em uma entrevista ou provas avaliativas de seleção de vagas de emprego na área de desenvolvimento Front-End.  
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Como objetivos específicos, podemos ressaltar:
+* Fornecer perguntas e respostas sobre tecnologias da programação;
+* Permitir ao usuário personalizar os assuntos da sequência de perguntas (quiz);  
+* No âmbito de macroavaliação, a busca de familiaridade com os termos e jargões utilizados na área de atuação profissional;
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+De acordo com dados da Associação Brasileira das Empresas de Tecnologia da Informação e Comunicação (Brasscom), o mercado deve criar 420 mil novas vagas até 2024. Porém, estima-se que, até lá, 150 mil vagas não serão preenchidas pela ausência de pessoas qualificadas. 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Contratar profissionais recém-formados pode ser uma das estratégias para movimentar o mercado de trabalho, direcionando a capacitação deles para as necessidades específicas  do dia a dia. 
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+É comum um jovem, ou mesmo, pessoas em transição de carreira, sentirem ansiedade e insegurança diante de uma entrevista de emprego, do qual deseja muito uma contratação. A simulação pode ajudar o candidato a se sentir mais confiante e preparado para o certame.   
+ 
+ O projeto é centrado nestes profissionais em busca de empregos na área de desenvolvimento Front-end, que precisam treinar suas habilidades para entrevistas de emprego e provas escritas de seleção
+
 
 ## Público-Alvo
+Estudantes de cursos de Tecnologia, especialmente Tecnólogos em Sistemas para Internet, que querem pleitear uma vaga no mercado de trabalho como desenvolvedores Front-end. 
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
