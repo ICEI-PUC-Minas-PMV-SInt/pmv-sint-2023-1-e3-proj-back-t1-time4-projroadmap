@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using interview.Models;
 
 namespace interview.Models
 {
@@ -6,8 +7,12 @@ namespace interview.Models
     {
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
         {
+         
         }
 
+
         public DbSet<Teste> Teste { get; set; }
+
+        public DbSet<interview.Models.Perguntas>? Perguntas { get; set; }
     }
 }
