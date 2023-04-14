@@ -14,5 +14,7 @@ namespace interview.Models
         public DbSet<Teste> Teste { get; set; }
 
         public DbSet<interview.Models.Perguntas>? Perguntas { get; set; }
+
+        public DbSet<interview.Models.Quiz>? Quiz { get; set; }
     }
 }
