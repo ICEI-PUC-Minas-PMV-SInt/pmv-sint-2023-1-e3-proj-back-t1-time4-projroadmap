@@ -1,19 +1,11 @@
 # Arquitetura da Solução
+Aqui são apresentados os detalhes técnicos da solução criada pela equipe, tratando do ambiente de hospedagem e do fluxo entre os componentes que fazem parte da aplicação.
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
-
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
-
-![Arquitetura da Solução](img/arch-back.JPG)
+## Diagrama de Caso de Uso
+![image](https://user-images.githubusercontent.com/22857183/232914793-1778748d-6478-4b63-b80a-126f75bf9572.png)
 
 ## Diagrama de Classes
-
-O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Classes”.
-
-> - [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
-> - [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
+![image](https://user-images.githubusercontent.com/22857183/232914924-e040c7a6-8599-4617-94aa-6767c0151495.png)
 
 ## Modelo ER
 
