@@ -11,10 +11,10 @@ namespace interview.Models
         }
 
 
-        public DbSet<Teste> Teste { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
-        public DbSet<interview.Models.Perguntas>? Perguntas { get; set; }
+        public DbSet<Perguntas>? Perguntas { get; set; }
 
-        public DbSet<interview.Models.Quiz>? Quiz { get; set; }
+        public DbSet<Quiz>? Quiz { get; set; }
     }
 }
