@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using interview.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.Identity.Client;
 
 namespace interview.Controllers
 {
@@ -17,6 +20,70 @@ namespace interview.Controllers
         {
             _context = context;
         }
+
+
+        // LOGIN: Usuarios
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login([Bind("Email,Senha")]Usuario usuario)
+        {
+            var user = await _context.Usuarios.
+                FirstOrDefaultAsync(m => m.Email == usuario.Email);
+
+            if (user == null)
+            {
+                ViewBag.Message = "Usuario e/ou Senha inválidos!";
+                return View();
+            }
+
+            bool senhaOk = BCrypt.Net.BCrypt.Verify(usuario.Senha, user.Senha);
+
+            if (senhaOk)
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.Nome),
+                    new Claim(ClaimTypes.NameIdentifier, user.Nome),
+                    new Claim(ClaimTypes.Role, user.Perfil.ToString())
+                };
+
+                var userIdentity = new ClaimsIdentity(claims, "login");
+
+                ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+
+                var props = new AuthenticationProperties
+                {
+                    AllowRefresh = true,
+                    IsPersistent= true,
+                };
+
+                await HttpContext.SignInAsync(principal, props);
+
+                return Redirect("/");
+
+            }
+            
+            ViewBag.Message = "Usuario e/ou Senha inválidos!";
+            return View();
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Login", "Usuarios");
+        }
+
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
+
 
         // GET: Usuarios
         public async Task<IActionResult> Index()
@@ -59,10 +126,23 @@ namespace interview.Controllers
         {
             if (ModelState.IsValid)
             {
+
+
+                usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
+
                 usuario.Perfil = Perfil.user;
                 _context.Add(usuario);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (DbUpdateException ex)
+                {
+                    // Log the exception if necessary
+                    ModelState.AddModelError("", "Esse email ja existe");
+                }
+
             }
             return View(usuario);
         }
@@ -99,6 +179,7 @@ namespace interview.Controllers
             {
                 try
                 {
+                    usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                     _context.Update(usuario);
                     await _context.SaveChangesAsync();
                 }

@@ -1,8 +1,0 @@
-﻿
-CREATE TABLE Usuarios (
-    Id INT PRIMARY KEY AUTO_INCREMENT,
-    Nome VARCHAR(255) NOT NULL,
-    Email VARCHAR(255) NOT NULL,
-    Senha VARCHAR(255) NOT NULL,
-    Perfil ENUM('Admin', 'User') DEFAULT 'User'
-);
