@@ -72,7 +72,7 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 
 
 ## Diagrama de Casos de Uso
-![image](https://user-images.githubusercontent.com/22857183/232914793-1778748d-6478-4b63-b80a-126f75bf9572.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/blob/0d93ecdeef60b68b33ac48f3e5b5139c0621fa6e/docs/img/Diagrama-casos-de-uso.png)
 
 
  
