@@ -135,7 +135,8 @@ namespace interview.Controllers
                 try
                 {
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                    TempData["SuccessMessage"] = "Usuário criado com sucesso!, faça seu Login";
+                    return RedirectToAction("Index", "Home");
                 }
                 catch (DbUpdateException ex)
                 {
@@ -144,7 +145,7 @@ namespace interview.Controllers
                 }
 
             }
-            return View(usuario);
+            return View();
         }
 
         // GET: Usuarios/Edit/5

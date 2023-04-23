@@ -1,14 +1,10 @@
 {
   "dependencies": {
-    "secrets1": {
-      "type": "secrets.user"
-    },
     "mssql1": {
-      "secretStore": "LocalSecretsFile",
+      "secretStore": "AzureAppSettings",
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/pucinterview-dbserver/databases/interview_db",
       "type": "mssql.azure",
-      "connectionId": "ConnectionStrings:MyConnection",
-      "dynamicId": null
+      "connectionId": "ConnectionStrings:MyConnection"
     }
   }
 }

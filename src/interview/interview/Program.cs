@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Adiciona "MyConnectionString" para conexação com banco MySql
+//Adiciona "MyConnectionString" para conexação com banco Sql
 
 var connectionString = builder.Configuration.GetConnectionString("MyConnection");
 
 // A configuração precisa ser feita apontando para MySQL se a instância for mysql
 builder.Services.AddDbContext<MyDbContext>(options =>
- options.UseMySQL(connectionString));
+ options.UseSqlServer(connectionString));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

@@ -2,8 +2,23 @@
   "dependencies": {
     "mssql1": {
       "restored": true,
-      "restoreTime": "2023-03-23T00:14:12.1630026Z"
+      "restoreTime": "2023-04-22T16:27:54.5024755Z"
+    },
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2023-04-22T16:27:40.1343223Z"
     }
   },
-  "parameters": {}
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "824e28a9-17d9-4cb3-aabb-3cfca918ce22"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "Novo"
+    }
+  }
 }
