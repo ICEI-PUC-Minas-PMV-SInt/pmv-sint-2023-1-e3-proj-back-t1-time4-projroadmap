@@ -14,12 +14,20 @@
 
 
 ## Ramon
-* Classe/Funcionalidades: ```em progresso``` 
-* Issue Relacionada:  ```em progresso``` 
-* Criação de Scripts de Banco: ```em progresso```
-* Criação de Modelo: ```em progresso```
-* Criação de Controlador: ```em progresso```
-* Resultados de estudo: ```em progresso``` 
+* Classe/Funcionalidades: CRUD Usuarios ```em progresso``` 
+* Issue Relacionada:  [issue #3](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/issues/3)
+* Criação de Modelo: [Usuarios](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/blob/main/src/interview/interview/Models/Usuario.cs)
+* Criação de Controlador:[Usuarios](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/blob/main/src/interview/interview/Controllers/UsuariosController.cs)
+* Prints de Tela: 
+  * Cadastro de Usuarios: [create](https://user-images.githubusercontent.com/97611971/234416737-f84a6608-0c73-4009-a949-f863d55036c7.png)
+  * Consulta de Usuarios: ![details](https://user-images.githubusercontent.com/97611971/234416912-24aac708-28f6-42ab-bd22-76f70fd31d1f.png)
+  * Login de Usuarios: ![login](https://user-images.githubusercontent.com/97611971/234416965-5969be5b-2c5c-4494-ac8a-4ea1b74780c6.png)
+  * Hospedagem e Banco de dados: ![azure](https://user-images.githubusercontent.com/97611971/234417112-15082c6a-e62d-407f-a1b8-11e64d7a8a40.png)
+  * DbContext: ![dbcontext](https://user-images.githubusercontent.com/97611971/234417146-9afe8c1e-d357-438d-901f-be47e75fd523.png)
+
+
+
+
 
 ## Cesar
 * Classe/Funcionalidades: ```em progresso``` 
