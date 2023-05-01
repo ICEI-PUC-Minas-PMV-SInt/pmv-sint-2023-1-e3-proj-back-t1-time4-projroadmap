@@ -41,8 +41,8 @@
 * Classe/Funcionalidades: Score ```em progresso``` 
 * Issue Relacionada: [issue #4](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/issues/4) ```em progresso``` 
 * Criação de Scripts de Banco: ```em progresso```
-* Criação de Modelo: ```em progresso```
-* Criação de Controlador: ```em progresso```
+* Criação de Modelo: [Score](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/blob/main/src/interview/interview/Models/Score.cs)
+* Criação de Controlador: [Score](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/blob/main/src/interview/interview/Controllers/ScoresController.cs)
 * Print de tela:
   * Cadastro/Edição de Score: ![Create](https://user-images.githubusercontent.com/101216578/235473545-3f2f1f71-14fc-4559-bbdb-3febc5498118.png)
   * Edit de Score: ![Edit](https://user-images.githubusercontent.com/101216578/235473618-40fafb7b-8138-4957-aaa2-dc049e41a1e6.png)
