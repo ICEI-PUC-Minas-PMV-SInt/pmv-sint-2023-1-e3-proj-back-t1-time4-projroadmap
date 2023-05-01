@@ -10,11 +10,12 @@ namespace interview.Models
          
         }
 
-
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Usuario>? Usuarios { get; set; }
 
         public DbSet<Perguntas>? Perguntas { get; set; }
 
         public DbSet<Quiz>? Quiz { get; set; }
+
+        public DbSet<Tema>? Tema { get; set; }
     }
 }
