@@ -16,5 +16,6 @@ namespace interview.Models
         public DbSet<Perguntas>? Perguntas { get; set; }
 
         public DbSet<Quiz>? Quiz { get; set; }
+        public DbSet<Score> Score { get; set; }
     }
 }
