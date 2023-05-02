@@ -26,16 +26,14 @@
   * DbContext: ![dbcontext](https://user-images.githubusercontent.com/97611971/234417146-9afe8c1e-d357-438d-901f-be47e75fd523.png)
 
 
+## César
+* Classe/Funcionalidades: CRUD de Temas
+* Issue Relacionada: [issue #8](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/issues/8)
+* Criação de Scripts de Banco: ```em progresso``` 
+* Criação de Modelo: [Tema.cs](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/blob/main/src/interview/interview/Models/Tema.cs)
+* Criação de Controlador: [TemasController.cs](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/blob/main/src/interview/interview/Controllers/TemasController.cs)
+* Resultados de estudo: ![Print_estudos](https://user-images.githubusercontent.com/79456516/235565257-1640ed12-212c-4c5d-8417-b6ce5162c2d3.png)
 
-
-
-## Cesar
-* Classe/Funcionalidades: ```em progresso``` 
-* Issue Relacionada:  ```em progresso``` 
-* Criação de Scripts de Banco: ```em progresso```
-* Criação de Modelo: ```em progresso```
-* Criação de Controlador: ```em progresso```
-* Resultados de estudo: ```em progresso``` 
 
 ## Rodolfo
 * Classe/Funcionalidades: Score ```em progresso``` 
@@ -49,8 +47,6 @@
   * Consulta de Score: ![Index](https://user-images.githubusercontent.com/101216578/235473775-2662b9fe-20b1-4a5a-94f8-88b3dce55885.png)
   * Delete de Score:![Delete](https://user-images.githubusercontent.com/101216578/235473844-76d8e964-f079-4e78-aeb1-7afcda433f9d.png)
 
-
- 
 
 ## Victor
 * Classe/Funcionalidades: ```em progresso``` 
