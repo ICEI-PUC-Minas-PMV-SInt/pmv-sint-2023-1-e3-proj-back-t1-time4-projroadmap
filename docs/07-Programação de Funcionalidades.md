@@ -18,6 +18,8 @@
 * Issue Relacionada:  [issue #3](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/issues/3)
 * Criação de Modelo: [Usuarios](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/blob/main/src/interview/interview/Models/Usuario.cs)
 * Criação de Controlador:[Usuarios](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/blob/main/src/interview/interview/Controllers/UsuariosController.cs)
+* Arquivo importado do Microsoft sql Server para cumprimento das rubricas [sql.txt](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/files/11390920/sql.txt)
+
 * Prints de Tela: 
   * Cadastro de Usuarios: [create](https://user-images.githubusercontent.com/97611971/234416737-f84a6608-0c73-4009-a949-f863d55036c7.png)
   * Consulta de Usuarios: ![details](https://user-images.githubusercontent.com/97611971/234416912-24aac708-28f6-42ab-bd22-76f70fd31d1f.png)
