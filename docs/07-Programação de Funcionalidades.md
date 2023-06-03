@@ -57,3 +57,32 @@
 * Criação de Modelo: ```em progresso```
 * Criação de Controlador: ```em progresso```
 * Resultados de estudo: ```em progresso``` 
+
+
+## Revisão das rubricas para etapa 3
+* H10e - Elaborar o diagrama MER da aplicação. :
+* H10f - Elaborar o modelo relacional da aplicação. :
+* H10g - Elaborar os templates da aplicação. :
+  * Projeto no Figma : [Figma](https://www.figma.com/file/4lUafzVHQfM6NWd8Dmja30/RFI---RoadMap-Front-End-Interview?type=design&node-id=3-3&t=e0EJV6mjg718xXfa-0)
+* H10h - Consolidar a documentação da aplicação web. :
+* H11a - Implementar as funcionalidades dos casos de uso da aplicação. :
+* H11b - Estruturar a criação da aplicações Web usando o padrão de projeto MVC :
+  * ![Organização de pastas](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/assets/97611971/18ddc177-5072-44e1-8a1d-aeb90915efab)
+* H11c - Criar instruções SQL baseadas em Linguagens de Definição de Dados (DDL) para construir o modelo físico do BD.
+* H11d - Criar instruções SQL baseadas em Linguagens de Manipulação de Dados (DML) para manipular dados BD.
+  * Arquivo importado do Microsoft sql Server para cumprimento das rubricas H11c e H11D [sql.txt](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/files/11390920/sql.txt)
+* H11e - Implementar as funcionalidades que envolvem as operações de CRUD da aplicação no BD.
+  * O CRUD de responsabilidade de cada um dos integrantes ja consta nessa pagina.
+* H11f - Implementar o processo de autenticação de usuários do sistema usando recursos da linguagem com as credenciais armazenadas no BD.
+* H11g - Usar uma função hash para realizar a criptografia de dados sigilosos da aplicação.
+* H11h - Criar papéis de autorização (administrador e cliente) que permitirão que usuários acessem o sistema com perfis e permissões distintas. 
+* H11i - Criar mecanismo de gerência de sistemas de arquivos para modificar permissão de escrita, exclusão e alteração em subdiretório do servidor.
+* H12a - Usar o framework ASP.NET  MVC para criar a aplicação baseada em camadas.
+* H12b - Usar o Entity framework para realizar o mapeamento objeto relacional e configurar as operações de CRUD.
+* H12c - Avaliar como os frameworks utilizados contribuíram para o desenvolvimento da aplicação. 
+* H13a - Planejar testes de software de funcionalidades do back-end. 
+* H13b - Aplicar e registrar testes de usabilidade de software na aplicação interativa.
+* H13c - Planejar testes de usabilidade de software na aplicação.
+* H13d - Aplicar dois padrões de projeto de software definidos pelo GoF, padrões de identação e convenção de nomes à aplicação.
+* H14a - Demonstrar capacidade de comunicação e colaboração em um processo de desenvolvimento de software.
+* H14b - Utilizar a metodologia ágil no desenvolvimento colaborativo de um sistema web.
