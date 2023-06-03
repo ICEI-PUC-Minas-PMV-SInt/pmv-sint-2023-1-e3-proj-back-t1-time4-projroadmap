@@ -21,7 +21,7 @@
 * Arquivo importado do Microsoft sql Server para cumprimento das rubricas [sql.txt](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/files/11390920/sql.txt)
 
 * Prints de Tela: 
-  * Cadastro de Usuarios: [create](https://user-images.githubusercontent.com/97611971/234416737-f84a6608-0c73-4009-a949-f863d55036c7.png)
+  * Cadastro de Usuarios: ![create](https://user-images.githubusercontent.com/97611971/234416737-f84a6608-0c73-4009-a949-f863d55036c7.png)
   * Consulta de Usuarios: ![details](https://user-images.githubusercontent.com/97611971/234416912-24aac708-28f6-42ab-bd22-76f70fd31d1f.png)
   * Login de Usuarios: ![login](https://user-images.githubusercontent.com/97611971/234416965-5969be5b-2c5c-4494-ac8a-4ea1b74780c6.png)
   * Hospedagem e Banco de dados: ![azure](https://user-images.githubusercontent.com/97611971/234417112-15082c6a-e62d-407f-a1b8-11e64d7a8a40.png)
@@ -74,15 +74,24 @@
 * H11e - Implementar as funcionalidades que envolvem as operações de CRUD da aplicação no BD.
   * O CRUD de responsabilidade de cada um dos integrantes ja consta nessa pagina.
 * H11f - Implementar o processo de autenticação de usuários do sistema usando recursos da linguagem com as credenciais armazenadas no BD.
+  * ![SQL Server com dados dos Usuarios cadastrados](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/assets/97611971/3e744d77-661d-4552-ab2a-24fccee9e1ea)
 * H11g - Usar uma função hash para realizar a criptografia de dados sigilosos da aplicação.
+  * ![Criptografia Hash para salvar a senha do usuario utilizando BCrypt](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/assets/97611971/4e99f3ef-5fe7-46b9-ab05-afd0f9493d85)
 * H11h - Criar papéis de autorização (administrador e cliente) que permitirão que usuários acessem o sistema com perfis e permissões distintas. 
+  * Os códigos a seguir demonstram como foi criado o modelo do Usuário com dois tipos possíveis de perfis e como esses perfis são utilizados na view para determinar o acesso ou não do usuário a uma página específica.![Usuario](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/assets/97611971/5cb92023-73ea-4184-ab59-e4df4a53d51e)
 * H11i - Criar mecanismo de gerência de sistemas de arquivos para modificar permissão de escrita, exclusão e alteração em subdiretório do servidor.
 * H12a - Usar o framework ASP.NET  MVC para criar a aplicação baseada em camadas.
+  * * ![Organização de pastas](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/assets/97611971/18ddc177-5072-44e1-8a1d-aeb90915efab)
 * H12b - Usar o Entity framework para realizar o mapeamento objeto relacional e configurar as operações de CRUD.
+  * ![Mapeamento do Objeto Relaciona com Entity](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/assets/97611971/7c3fc9e0-53de-41a1-98ee-52b07764ac79)
+  * ![Controller com operações CRUD criadas pelo framework](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/assets/97611971/f3eabe40-02cb-46ef-9f77-6ae911fb38f1)
 * H12c - Avaliar como os frameworks utilizados contribuíram para o desenvolvimento da aplicação. 
+  * 
 * H13a - Planejar testes de software de funcionalidades do back-end. 
 * H13b - Aplicar e registrar testes de usabilidade de software na aplicação interativa.
 * H13c - Planejar testes de usabilidade de software na aplicação.
 * H13d - Aplicar dois padrões de projeto de software definidos pelo GoF, padrões de identação e convenção de nomes à aplicação.
 * H14a - Demonstrar capacidade de comunicação e colaboração em um processo de desenvolvimento de software.
 * H14b - Utilizar a metodologia ágil no desenvolvimento colaborativo de um sistema web.
+  *  ![Metodologias Scrum](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/assets/97611971/dd4d4b6f-60fe-47e9-b8ce-763b3df9fa1d)
+
