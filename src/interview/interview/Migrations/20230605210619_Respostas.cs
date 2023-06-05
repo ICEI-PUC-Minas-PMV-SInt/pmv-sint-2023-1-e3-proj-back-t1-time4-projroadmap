@@ -24,6 +24,7 @@ namespace interview.Migrations
                 {
                     table.PrimaryKey("PK_Respostas", x => x.Id);
                 });
+        }
 
             
         /// <inheritdoc />
