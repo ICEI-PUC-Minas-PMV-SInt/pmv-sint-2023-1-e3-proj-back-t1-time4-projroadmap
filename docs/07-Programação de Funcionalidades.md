@@ -60,10 +60,6 @@
 
 
 ## Revisão das rubricas para etapa 3
-* H10e - Elaborar o diagrama MER da aplicação. :
-* H10f - Elaborar o modelo relacional da aplicação. :
-* H10g - Elaborar os templates da aplicação. :
-  * Projeto no Figma : [Figma](https://www.figma.com/file/4lUafzVHQfM6NWd8Dmja30/RFI---RoadMap-Front-End-Interview?type=design&node-id=3-3&t=e0EJV6mjg718xXfa-0)
 * H10h - Consolidar a documentação da aplicação web. :
 * H11a - Implementar as funcionalidades dos casos de uso da aplicação. :
 * H11b - Estruturar a criação da aplicações Web usando o padrão de projeto MVC :
