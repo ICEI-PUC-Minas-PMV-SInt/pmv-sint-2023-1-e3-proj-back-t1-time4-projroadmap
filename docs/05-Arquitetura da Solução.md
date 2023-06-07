@@ -25,11 +25,11 @@ A aplicação utiliza a plataforma do Azure (https://azure.microsoft.com) como a
 
 ## Modelo ER
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/blob/8dc92d06666a43fa6f7f6026c89809d5fc5edd7b/docs/img/Modelo-entidade-relacionamento.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/blob/e9c5c8a576808724f9bf2bd7901bbe23345e1538/docs/img/Modelo-entidade-relacionamento-v2.png)
 
 ## Esquema Relacional
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/blob/8dc92d06666a43fa6f7f6026c89809d5fc5edd7b/docs/img/Esquema-relacional.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/blob/e9c5c8a576808724f9bf2bd7901bbe23345e1538/docs/img/Esquema-relacional-v2.png)
 
 ## Modelo Físico (DDL)
 
