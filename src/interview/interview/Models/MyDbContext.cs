@@ -20,7 +20,7 @@ namespace interview.Models
 
         public DbSet<Score> Score { get; set; }
 
-        public DbSet<Respostas> Respostas { get; set; }
+        public DbSet<Respostas>? Respostas { get; set; }
 
     }
 }

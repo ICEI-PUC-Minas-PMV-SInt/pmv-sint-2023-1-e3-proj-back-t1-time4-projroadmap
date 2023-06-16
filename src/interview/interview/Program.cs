@@ -69,4 +69,10 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+app.MapControllerRoute(
+    name: "quiz",
+    pattern: "Quizs/{id?}",
+    defaults: new { controller = "Quizs", action = "SelectTheme" }
+);
+
 app.Run();

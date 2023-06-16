@@ -1,0 +1,15 @@
+@model IEnumerable<interview.Models.Tema>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+@foreach (var item in Model)
+{
+    <button>@Html.DisplayFor(modelItem => item.Titulo)</button>
+}
+
+

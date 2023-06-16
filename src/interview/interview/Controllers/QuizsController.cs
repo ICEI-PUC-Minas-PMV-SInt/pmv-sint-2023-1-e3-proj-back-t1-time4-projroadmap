@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using interview.Models;
 
+
 namespace interview.Controllers
 {
     public class QuizsController : Controller
@@ -18,145 +19,49 @@ namespace interview.Controllers
             _context = context;
         }
 
-        // GET: Quizs
+        // GET: quizs
         public async Task<IActionResult> Index()
         {
-              return _context.Quiz != null ? 
-                          View(await _context.Quiz.ToListAsync()) :
-                          Problem("Entity set 'MyDbContext.Quiz'  is null.");
+            return _context.Tema != null ?
+                        View(await _context.Tema.ToListAsync()) :
+                        Problem("Entity set 'MyDbContext.'  is null.");
         }
 
-        // GET: Quizs/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public IActionResult SelectTheme(int id)
         {
-            if (id == null || _context.Quiz == null)
+            // Get the selected theme based on the ID
+            var selectedTheme = _context.Tema?.FirstOrDefault(t => t.Id == id);
+
+            if (selectedTheme == null)
             {
                 return NotFound();
             }
 
-            var quiz = await _context.Quiz
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (quiz == null)
+            // Get the questions related to the selected theme
+            var questions = _context.Perguntas?.Where(p => p.idTema == selectedTheme.Id).ToList();
+
+            var respostas = new List<Respostas>();
+
+            List<int> IdsPerguntas = new List<int>();
+
+
+            foreach (var question in questions)
             {
-                return NotFound();
+                IdsPerguntas.Add(question.Id);
             }
 
-            return View(quiz);
+            foreach (var idPergunta in IdsPerguntas)
+            {
+                var resposta = _context.Respostas?.Where(r => r.IdPergunta == idPergunta).ToList();
+                respostas.AddRange(resposta);
+            }
+
+            // Create a QuizViewModel and populate it with the selected theme and questions
+            var quizViewModel = new QuizViewModel { Tema = selectedTheme, Perguntas = questions, Respostas = respostas};
+
+            return View("Quiz", quizViewModel);
         }
 
-        // GET: Quizs/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
 
-        // POST: Quizs/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Description")] Quiz quiz)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(quiz);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(quiz);
-        }
-
-        // GET: Quizs/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.Quiz == null)
-            {
-                return NotFound();
-            }
-
-            var quiz = await _context.Quiz.FindAsync(id);
-            if (quiz == null)
-            {
-                return NotFound();
-            }
-            return View(quiz);
-        }
-
-        // POST: Quizs/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Description")] Quiz quiz)
-        {
-            if (id != quiz.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(quiz);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!QuizExists(quiz.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(quiz);
-        }
-
-        // GET: Quizs/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.Quiz == null)
-            {
-                return NotFound();
-            }
-
-            var quiz = await _context.Quiz
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (quiz == null)
-            {
-                return NotFound();
-            }
-
-            return View(quiz);
-        }
-
-        // POST: Quizs/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.Quiz == null)
-            {
-                return Problem("Entity set 'MyDbContext.Quiz'  is null.");
-            }
-            var quiz = await _context.Quiz.FindAsync(id);
-            if (quiz != null)
-            {
-                _context.Quiz.Remove(quiz);
-            }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool QuizExists(int id)
-        {
-          return (_context.Quiz?.Any(e => e.Id == id)).GetValueOrDefault();
-        }
     }
 }

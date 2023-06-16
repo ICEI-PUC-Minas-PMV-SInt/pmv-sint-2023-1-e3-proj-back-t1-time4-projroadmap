@@ -26,6 +26,8 @@ namespace interview.Controllers
                           Problem("Entity set 'MyDbContext.Tema'  is null.");
         }
 
+    
+
         // GET: Temas/Details/5
         public async Task<IActionResult> Details(int? id)
         {
