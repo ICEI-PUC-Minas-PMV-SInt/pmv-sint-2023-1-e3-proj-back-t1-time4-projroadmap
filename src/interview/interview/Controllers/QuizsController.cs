@@ -57,11 +57,27 @@ namespace interview.Controllers
             }
 
             // Create a QuizViewModel and populate it with the selected theme and questions
-            var quizViewModel = new QuizViewModel { Tema = selectedTheme, Perguntas = questions, Respostas = respostas};
+            var quizViewModel = new QuizViewModel { Tema = selectedTheme, Perguntas = questions, Respostas = respostas };
 
             return View("Quiz", quizViewModel);
         }
 
+        [HttpPost]
+        public IActionResult ScoreFinal(FormCollection form)
+        {
+            Console.WriteLine(form);
+            var score = new Score();
 
+            score.IdQuiz = Convert.ToInt32(form["IdQuiz"]);
+            score.IdUsuario = Convert.ToInt32(form["IdUsuario"]);
+            score.Pontos = Convert.ToDouble(form["Pontos"]);
+
+            _context.Score?.Add(score);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
+        }
     }
+    
+
 }

@@ -5,25 +5,37 @@
 }
 
 @model QuizViewModel
-
+<style>
+.current {
+        display: block;
+    }
+    .hidden {
+        display: none;
+    }
+</style>
 <h1>Quiz: @Model.Tema.Titulo</h1>
 
-
+<form>
 @foreach (var pergunta in Model.Perguntas)
 {
+    <div class="current">
     <h3>@pergunta.Description</h3>
+
         @foreach (var resposta in Model.Respostas.Where(r => r.IdPergunta == pergunta.Id))
     {
         <input type="radio" name="@pergunta.Id" value="@resposta.Id" /> @resposta.Description
         <br/>
     }
+    </div>
+  
 }
 
-<button onclick="submitQuiz()">Submit Quiz</button>
-
+<button type="submit" action="ScoreFinal">Submit Quiz</button>
+</form>
 <script>
-    // Rest of your JavaScript code
+  
 </script>
+
 
 @section Scripts {
     @{
