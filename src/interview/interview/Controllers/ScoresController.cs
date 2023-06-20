@@ -6,25 +6,34 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using interview.Models;
+using System.Security.Claims;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace interview.Controllers
 {
     public class ScoresController : Controller
     {
         private readonly MyDbContext _context;
+        private readonly IHttpContextAccessor _accessor;
 
-        public ScoresController(MyDbContext context)
+        public ScoresController(MyDbContext context, IHttpContextAccessor accessor)
         {
             _context = context;
+            _accessor = accessor;
         }
 
         // GET: Scores
         public async Task<IActionResult> Index()
         {
-              return _context.Score != null ? 
-                          View(await _context.Score.ToListAsync()) :
-                          Problem("Entity set 'MyDbContext.Score'  is null.");
+            int UserId = int.Parse(_accessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var scoreUser = _context.Score.Where(s => s.IdUsuario == UserId);
+
+            return _context.Score != null ?
+                          View(await scoreUser.ToListAsync()) :
+                          Problem("Entity set 'MyDbContext.Tema'  is null.");
         }
+
 
         // GET: Scores/Details/5
         public async Task<IActionResult> Details(int? id)

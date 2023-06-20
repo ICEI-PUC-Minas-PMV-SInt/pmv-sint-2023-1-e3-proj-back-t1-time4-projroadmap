@@ -16,12 +16,10 @@ namespace interview.Controllers
     public class UsuariosController : Controller
     {
         private readonly MyDbContext _context;
-        private readonly IMemoryCache _memoryCache;
 
-        public UsuariosController(MyDbContext context, IMemoryCache memoryCache)
+        public UsuariosController(MyDbContext context)
         {
             _context = context;
-            _memoryCache = memoryCache;
         }
 
 
@@ -67,8 +65,6 @@ namespace interview.Controllers
 
                 await HttpContext.SignInAsync(principal, props);
 
-                //Add user.Id to cache
-                _memoryCache.Set("UserId", user.Id);
 
                 return Redirect("/");
 
@@ -80,7 +76,6 @@ namespace interview.Controllers
 
         public async Task<IActionResult> Logout()
         {
-            _memoryCache.Remove("UserId");
             await HttpContext.SignOutAsync();
             return RedirectToAction("Login", "Usuarios");
         }

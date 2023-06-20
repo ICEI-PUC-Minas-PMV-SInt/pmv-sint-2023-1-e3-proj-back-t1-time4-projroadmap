@@ -9,19 +9,20 @@ using interview.Models;
 using System.Net.NetworkInformation;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Caching.Memory;
+using System.Security.Claims;
 
 namespace interview.Controllers
 {
     public class QuizsController : Controller
     {
         private readonly MyDbContext _context;
-        private readonly IMemoryCache _memoryCache;
+        private readonly IHttpContextAccessor _accessor;
 
 
-        public QuizsController(MyDbContext context, IMemoryCache memoryCache)
+        public QuizsController(MyDbContext context, IHttpContextAccessor accessor)
         {
             _context = context;
-            _memoryCache = memoryCache;
+            _accessor = accessor;
         }
 
         // GET: quizs
@@ -72,8 +73,8 @@ namespace interview.Controllers
         public async Task<IActionResult> ScoreA(int[] RespostasSelecionadas)
         {
             int pontos = 0;
-            
-            var userId = _memoryCache.Get<int>("UserId");
+
+            var userId = _accessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             foreach (var resposta in RespostasSelecionadas)
             {
@@ -87,16 +88,16 @@ namespace interview.Controllers
             Score score = new Score
             {
                 Pontos = pontos,
-                IdUsuario = userId
+                IdUsuario = int.Parse(userId)
             };
 
             if (ModelState.IsValid)
             {
                 _context.Add(score);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Scores");
             }
-            return View(score);
+            return View("Index", score);
 
     
         }

@@ -20,8 +20,8 @@ builder.Services.AddDbContext<MyDbContext>(options =>
 builder.Services.AddControllersWithViews();
 
 
-builder.Services.AddMemoryCache();
-    
+builder.Services.AddHttpContextAccessor();
+
 
 builder.Services.Configure<IdentityOptions>(options =>
 {
@@ -71,9 +71,7 @@ app.UseAuthentication();
 
 app.UseAuthorization();
 
-
 app.UseCookiePolicy();
-
 
 app.MapControllerRoute(
     name: "default",
