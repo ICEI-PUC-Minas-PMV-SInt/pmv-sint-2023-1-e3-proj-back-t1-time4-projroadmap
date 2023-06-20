@@ -15,22 +15,24 @@
 </style>
 <h1>Quiz: @Model.Tema.Titulo</h1>
 
-<form>
-@foreach (var pergunta in Model.Perguntas)
-{
-    <div class="current">
-    <h3>@pergunta.Description</h3>
-
-        @foreach (var resposta in Model.Respostas.Where(r => r.IdPergunta == pergunta.Id))
+<form asp-action="ScoreA" method="post">
+    @for (var i = 0; i < Model.Perguntas.Count; i++)
     {
-        <input type="radio" name="@pergunta.Id" value="@resposta.Id" /> @resposta.Description
-        <br/>
-    }
-    </div>
-  
-}
+        <div class="current">
+            <h3>@Model.Perguntas[i].Description</h3>
 
-<button type="submit" action="ScoreFinal">Submit Quiz</button>
+            @for (var j = 0; j < Model.Respostas.Count; j++)
+            {
+                if (Model.Respostas[j].IdPergunta == Model.Perguntas[i].Id)
+                {
+                    <input type="radio" name="RespostasSelecionadas[@i]" value="@Model.Respostas[j].Id" /> @Model.Respostas[j].Description
+                    <br />
+                }
+            }
+        </div>
+    }
+
+    <button type="submit">Submit Quiz</button>
 </form>
 <script>
   

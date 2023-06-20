@@ -3,6 +3,8 @@ using interview.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using NuGet.Protocol;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,14 +19,17 @@ builder.Services.AddDbContext<MyDbContext>(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+    
+
 builder.Services.Configure<IdentityOptions>(options =>
 {
     // Default User settings.
     options.User.AllowedUserNameCharacters =
             "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
     options.User.RequireUniqueEmail = true;
-
+    options.Tokens.AuthenticatorTokenProvider = TokenOptions.DefaultAuthenticatorProvider;
 });
+
 
 builder.Services.AddAuthentication(options =>
 {
@@ -44,6 +49,7 @@ builder.Services.AddAuthentication(options =>
 var app = builder.Build();
 
 
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -61,6 +67,7 @@ app.UseRouting();
 app.UseAuthentication();
 
 app.UseAuthorization();
+
 
 app.UseCookiePolicy();
 

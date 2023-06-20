@@ -10,7 +10,6 @@ namespace interview.Models
         [Key]
         public int Id { get; set; }
         public double Pontos { get; set; }
-        public int  IdQuiz { get; set; }
         public int IdUsuario { get; set; }
 
     }

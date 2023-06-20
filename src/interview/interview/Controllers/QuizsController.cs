@@ -6,7 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using interview.Models;
-
+using System.Net.NetworkInformation;
+using Microsoft.AspNetCore.Identity;
 
 namespace interview.Controllers
 {
@@ -27,6 +28,7 @@ namespace interview.Controllers
                         Problem("Entity set 'MyDbContext.'  is null.");
         }
 
+        [HttpGet]
         public IActionResult SelectTheme(int id)
         {
             // Get the selected theme based on the ID
@@ -63,20 +65,36 @@ namespace interview.Controllers
         }
 
         [HttpPost]
-        public IActionResult ScoreFinal(FormCollection form)
+        public async Task<IActionResult> ScoreA(int[] RespostasSelecionadas)
         {
-            Console.WriteLine(form);
-            var score = new Score();
+            int pontos =0;
+            string userId = User.Identity.Name;
+            foreach (var resposta in RespostasSelecionadas)
+            {
+                var respostaSelecionada = _context.Respostas?.FirstOrDefault(r => r.Id == resposta);
+                if (respostaSelecionada.IsCorrect == Respostas.Correct.True)
+                {
+                    pontos++;
+                }
+            }
 
-            score.IdQuiz = Convert.ToInt32(form["IdQuiz"]);
-            score.IdUsuario = Convert.ToInt32(form["IdUsuario"]);
-            score.Pontos = Convert.ToDouble(form["Pontos"]);
+            var score = new Score
+            {
+                Pontos = pontos,
+                IdUsuario = 1
+            };
 
-            _context.Score?.Add(score);
-            _context.SaveChanges();
+            if (ModelState.IsValid)
+            {
+                _context.Add(score);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(score);
 
-            return RedirectToAction("Index", "Home");
+    
         }
+
     }
     
 
