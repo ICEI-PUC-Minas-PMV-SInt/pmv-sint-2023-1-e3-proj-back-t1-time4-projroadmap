@@ -8,16 +8,20 @@ using Microsoft.EntityFrameworkCore;
 using interview.Models;
 using System.Net.NetworkInformation;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace interview.Controllers
 {
     public class QuizsController : Controller
     {
         private readonly MyDbContext _context;
+        private readonly IMemoryCache _memoryCache;
 
-        public QuizsController(MyDbContext context)
+
+        public QuizsController(MyDbContext context, IMemoryCache memoryCache)
         {
             _context = context;
+            _memoryCache = memoryCache;
         }
 
         // GET: quizs
@@ -67,21 +71,23 @@ namespace interview.Controllers
         [HttpPost]
         public async Task<IActionResult> ScoreA(int[] RespostasSelecionadas)
         {
-            int pontos =0;
-            string userId = User.Identity.Name;
+            int pontos = 0;
+            
+            var userId = _memoryCache.Get<int>("UserId");
+
             foreach (var resposta in RespostasSelecionadas)
             {
                 var respostaSelecionada = _context.Respostas?.FirstOrDefault(r => r.Id == resposta);
-                if (respostaSelecionada.IsCorrect == Respostas.Correct.True)
+                if (respostaSelecionada?.IsCorrect == Respostas.Correct.True)
                 {
                     pontos++;
                 }
             }
 
-            var score = new Score
+            Score score = new Score
             {
                 Pontos = pontos,
-                IdUsuario = 1
+                IdUsuario = userId
             };
 
             if (ModelState.IsValid)

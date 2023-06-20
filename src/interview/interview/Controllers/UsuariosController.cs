@@ -9,16 +9,19 @@ using interview.Models;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Identity.Client;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace interview.Controllers
 {
     public class UsuariosController : Controller
     {
         private readonly MyDbContext _context;
+        private readonly IMemoryCache _memoryCache;
 
-        public UsuariosController(MyDbContext context)
+        public UsuariosController(MyDbContext context, IMemoryCache memoryCache)
         {
             _context = context;
+            _memoryCache = memoryCache;
         }
 
 
@@ -48,7 +51,7 @@ namespace interview.Controllers
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.Nome),
-                    new Claim(ClaimTypes.NameIdentifier, user.Nome),
+                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                     new Claim(ClaimTypes.Role, user.Perfil.ToString())
                 };
 
@@ -64,6 +67,9 @@ namespace interview.Controllers
 
                 await HttpContext.SignInAsync(principal, props);
 
+                //Add user.Id to cache
+                _memoryCache.Set("UserId", user.Id);
+
                 return Redirect("/");
 
             }
@@ -74,6 +80,7 @@ namespace interview.Controllers
 
         public async Task<IActionResult> Logout()
         {
+            _memoryCache.Remove("UserId");
             await HttpContext.SignOutAsync();
             return RedirectToAction("Login", "Usuarios");
         }

@@ -19,6 +19,8 @@ builder.Services.AddDbContext<MyDbContext>(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+
+builder.Services.AddMemoryCache();
     
 
 builder.Services.Configure<IdentityOptions>(options =>
@@ -27,7 +29,7 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.User.AllowedUserNameCharacters =
             "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
     options.User.RequireUniqueEmail = true;
-    options.Tokens.AuthenticatorTokenProvider = TokenOptions.DefaultAuthenticatorProvider;
+
 });
 
 
@@ -35,6 +37,7 @@ builder.Services.AddAuthentication(options =>
 {
     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 })
+
 .AddCookie(options =>
 {
     options.AccessDeniedPath = "/Usuarios/AccessDenied";
