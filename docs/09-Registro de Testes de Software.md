@@ -7,6 +7,12 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 atendeu parcialmente 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/assets/90725686/9366f4bb-c0f3-4b82-9ad7-b8e0c35892b0)
 
+atendeu 
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/assets/90725686/6aac5739-dcaf-4bad-8468-41b8f51fe9c3)
+
+atendeu 
+
 
 ## Avaliação
 
