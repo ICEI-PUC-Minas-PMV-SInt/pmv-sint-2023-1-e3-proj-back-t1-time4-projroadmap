@@ -46,7 +46,7 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-01|O site deve apresentar, em sua página principal, um texto explicativo e conciso quanto ao seu propósito. | Alta|
-|RF-02|O site deve permitir, na página inicial, a escolha dos temas de testes disponíveis. | Alta|
+|RF-02|O site deve permitir, na página de quiz, a escolha dos temas de testes disponíveis. | Alta|
 |RF-03|Ao selecionar um tema, o sistema deve carregar o questionário selecionado, sem a necessidade de outro botão para confirmar a escolha.| Média|
 |RF-04|O sistema deverá possibilitar a revisão das questões antes de submeter o questionário para avaliação. | Média|
 |RF-05|O sistema deve apresentar ao usuário uma página com seus erros e acertos após submeter o questionário para avaliação. | Alta|
