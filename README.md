@@ -14,7 +14,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * Paulo Henrique Vieira
 * Ramon Vicente
 * Rodolfo Cícero
-* Victor Hugo Rodrigues
+* Victor Hugo Rodrigues Duhau
 
 ## Orientador
 
