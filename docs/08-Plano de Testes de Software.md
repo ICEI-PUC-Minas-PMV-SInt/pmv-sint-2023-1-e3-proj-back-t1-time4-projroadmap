@@ -18,7 +18,13 @@ Os testes funcionais a serem realizados no site estão descritos a seguir.
  |:---:|:---|
  |Requisitos associados| RF-02	O site deve permitir, na página inicial, a escolha dos temas de testes disponíveis. |
  |Prioridade|Alta.|
-  |Critérios de Êxito|<ul><li>Na página de Quiz é necessário mostrar os temas disponíveis para teste.</li></ul>| 
+ |Critérios de Êxito|<ul><li>Na página de Quiz é necessário mostrar os temas disponíveis para teste.</li></ul>| 
+
+| Casos de Teste | CT-03|
+|:----------------:|:------|
+|Requisitos| RF-06	O sistema deve permitir retornar à home page a partir de qualquer página do site.|
+|Prioridade| Média.|
+|Critérios de Êxito|<ul><li>Qualquer página do sistema deverá apresentar a opção de HOME PAGE.</li></ul>|
 ## Ferramentas de Testes (Opcional)
 
 Comente sobre as ferramentas de testes utilizadas.
