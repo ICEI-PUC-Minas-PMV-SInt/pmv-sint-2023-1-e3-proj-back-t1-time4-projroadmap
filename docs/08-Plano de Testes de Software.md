@@ -14,17 +14,41 @@ Os testes funcionais a serem realizados no site estão descritos a seguir.
 |Prioridade| Alta.|
 |Critérios de Êxito|<ul><li>Solução precisa mostrar o texto explicativo.</li></ul>|
    
- |Caso de Teste|CT-02|
- |:---:|:---|
- |Requisitos associados| RF-02	O site deve permitir, na página inicial, a escolha dos temas de testes disponíveis. |
- |Prioridade|Alta.|
- |Critérios de Êxito|<ul><li>Na página de Quiz é necessário mostrar os temas disponíveis para teste.</li></ul>| 
+|Caso de Teste|CT-02|
+|:---:|:---|
+|Requisitos associados| RF-02	O site deve permitir, na página inicial, a escolha dos temas de testes disponíveis. |
+|Prioridade|Alta.|
+|Critérios de Êxito|<ul><li>Na página de Quiz é necessário mostrar os temas disponíveis para teste.</li></ul>| 
 
 | Casos de Teste | CT-03|
+|:----------------:|:------|
+|Requisitos| RF-03	Ao selecionar um tema, o sistema deve carregar o questionário selecionado, sem a necessidade de outro botão para confirmar a escolha.|
+|Prioridade| Média|
+|Critérios de Êxito|<ul><li>Solução precisa careegar tema selecionado.</li></ul>|
+
+| Casos de Teste | CT-04|
+|:----------------:|:------|
+|Requisitos| RF-04	O sistema deverá possibilitar a revisão das questões antes de submeter o questionário para avaliação.|
+|Prioridade| Média|
+|Critérios de Êxito|<ul><li>Poder revisar antes de submeter.</li></ul>|
+
+| Casos de Teste | CT-05|
+|:----------------:|:------|
+|Requisitos| RF-05	O sistema deve apresentar ao usuário uma página com seus erros e acertos após submeter o questionário para avaliação.|
+|Prioridade| Média|
+|Critérios de Êxito|<ul><li>Usuário poderá visualizar seus erros e acertos.</li></ul>|
+
+| Casos de Teste | CT-06|
 |:----------------:|:------|
 |Requisitos| RF-06	O sistema deve permitir retornar à home page a partir de qualquer página do site.|
 |Prioridade| Média.|
 |Critérios de Êxito|<ul><li>Qualquer página do sistema deverá apresentar a opção de HOME PAGE.</li></ul>|
+
+| Casos de Teste | CT-07|
+|:----------------:|:------|
+|Requisitos| RF-07	O sistema deve exigir autenticação para o acesso à sessão de todos os usuários..|
+|Prioridade| Alta.|
+|Critérios de Êxito|<ul><li> Solicitar autenticação para acesso ao sistema.</li></ul>|
 ## Ferramentas de Testes (Opcional)
 
 Comente sobre as ferramentas de testes utilizadas.
