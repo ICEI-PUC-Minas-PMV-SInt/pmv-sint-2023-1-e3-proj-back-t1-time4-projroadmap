@@ -5,7 +5,8 @@
 Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
 
 atendeu parcialmente 
-![image](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/assets/90725686/9366f4bb-c0f3-4b82-9ad7-b8e0c35892b0)
+![image](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e3-proj-back-t1-time4-projroadmap/assets/90725686/8707a2a9-5ae4-4f1d-b0b7-a57f85f50482)
+
 
 atendeu 
 
